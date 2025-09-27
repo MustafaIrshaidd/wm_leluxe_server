@@ -32,7 +32,7 @@ router.get("/", (_req, res) => {
 router.post("/", (req, res) => {
   try {
     const payload = getJsonBody(req);
-    console.log(payload);
+    console.log(JSON.stringify(payload, null, 2));
     // TODO: handle ClickUp webhook events as needed
     // e.g., inspect payload.event, payload.history_items, etc.
     res.status(200).json({ received: true });
